@@ -58,7 +58,7 @@ public class GitChangeLogConsumerTest extends ScmTestCase {
 
         GitChangeLogConsumer consumer = new GitChangeLogConsumer(null);
 
-        File f = getTestFile("/src/test/resources/git/changelog/gitwhatchanged.gitlog");
+        File f = getTestFile("/src/test/resources/git/changelog/gitlog.gitlog");
 
         ConsumerUtils.consumeFile(f, consumer);
 
@@ -105,7 +105,7 @@ public class GitChangeLogConsumerTest extends ScmTestCase {
     public void testConsumer2() throws Exception {
         GitChangeLogConsumer consumer = new GitChangeLogConsumer(null);
 
-        File f = getTestFile("/src/test/resources/git/changelog/gitwhatchanged2.gitlog");
+        File f = getTestFile("/src/test/resources/git/changelog/gitlog2.gitlog");
 
         ConsumerUtils.consumeFile(f, consumer);
 

@@ -199,7 +199,7 @@ public class GitChangeLogCommand extends AbstractChangeLogCommand implements Git
     // ----------------------------------------------------------------------
 
     /**
-     * This method creates the commandline for the git-whatchanged command.
+     * This method creates the commandline for the git-log command.
      * <p>
      * Since it uses --since and --until for the start and end date, the branch
      * and version parameters can be used simultanously.
@@ -251,7 +251,7 @@ public class GitChangeLogCommand extends AbstractChangeLogCommand implements Git
         SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
         dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 
-        Commandline cl = GitCommandLineUtils.getBaseGitCommandLine(workingDirectory, "whatchanged");
+        Commandline cl = GitCommandLineUtils.getBaseGitCommandLine(workingDirectory, "log");
         cl.createArg().setValue("--format=medium");
         cl.createArg().setValue("--decorate=short");
         cl.createArg().setValue("--raw");
